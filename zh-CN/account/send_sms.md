@@ -14,7 +14,7 @@ name: 发送手机验证码
 ### Request Payload
     {
         "mobile":"手机号码，数据类型string, 必填",
-        "captcha_token":"行为验证token，数据类型string，必填"
+        "captcha_token":"行为验证token，数据类型string，必填",
         "device_model": "设备型号,数据类型string，目前可以选填，后期做了安全加固后必填",
         "device_name": "设备名称，数据类型string，目前可以选填，后期做了安全加固后必填",
         "timestamp": "发送验证码时间，unix时间戳单位s，数据类型int，目前可以选填后期做了安全加固后必填",

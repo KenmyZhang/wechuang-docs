@@ -50,7 +50,7 @@ name: 账号密码登录(手机号)
     
 
 ### Example
-    curl -X POST  "http://0:9004/weidu/api/v1/users/login"  -d '{"login_id":"13544285663", "password": "Zk12345678", "captcha_token":"xxxxxx"}'   -i
+    curl -X POST  "http://129.28.198.139:9004/weidu/api/v1/users/login"  -d '{"login_id":"13544285663", "password": "Zk12345678", "captcha_token":"xxxxxx"}'   -i
             HTTP/1.1 200 OK
             Content-Type: application/json; charset=utf-8
             Set-Cookie: weichuangAUTHTOKEN=3r6ebp6gabf6unbee35eu8u6bo; Path=/; Domain=0.0.0.0; Expires=Sun, 04 Oct 2020 09:19:55 GMT; HttpOnly

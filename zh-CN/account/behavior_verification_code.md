@@ -27,7 +27,7 @@ name: 行为验证码校验
     HTTP/1.1 200 OK
 
 ### Example
-     curl -X POST "http://0:9004/weidu/api/v1/users/behavior/verification" -i -d '{"captcha_id": "xxx"}' 
+     curl -X POST "http://129.28.198.139:9004/weidu/api/v1/users/behavior/verification" -i -d '{"captcha_id": "xxx"}' 
         HTTP/1.1 200 OK
         Content-Type: application/json; charset=utf-8
         Date: Sun, 04 Oct 2020 07:34:03 GMT

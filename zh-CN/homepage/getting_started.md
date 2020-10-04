@@ -19,7 +19,7 @@ name: 开始使用 START
         "code": "成功返回200，否则返回其他错误码，数据类型int",
         "list": [
             {
-                "action_type":"操作类型，包括发布publish、监制superintend、制作make，数据类型string",
+                "action_type":"操作类型，包括发布1、监制2、制作3，数据类型int",
                 "name": "名称，数据类型string",
                 "cover_link":"封面链接，数据类型string"
             }
@@ -30,7 +30,7 @@ name: 开始使用 START
     HTTP/1.1 200 OK
 
 ### Example
-     curl -X POST "http://129.28.198.139:8089 /weidu/api/v1/homepage/start/list"  -i
+     curl -X POST "http://129.28.198.139:8089/weidu/api/v1/homepage/start/list"  -i
         HTTP/1.1 200 OK
         Content-Length: 17
         Content-Type: application/json

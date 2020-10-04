@@ -32,7 +32,7 @@ name: 通过手机验证码重置密码
     
 
 ### Example
-    curl -X POST  "http://0:9004/weidu/api/v1/users/mobile/reset"  -d '{"mobile":"13544285663", "sms_code": "068168", "captcha_token":"xxxxxx", "password": "Zz12345678"}'   -i
+    curl -X POST  "http://129.28.198.139:9004/weidu/api/v1/users/mobile/reset"  -d '{"mobile":"13544285663", "sms_code": "068168", "captcha_token":"xxxxxx", "password": "Zz12345678"}'   -i
             
             HTTP/1.1 200 OK
             Content-Type: application/json; charset=utf-8

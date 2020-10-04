@@ -27,7 +27,7 @@ name: 判断手机号是否已经注册过
     HTTP/1.1 200 OK
 
 ### Example
-     curl -X POST "http://129.28.198.139:8089/weidu/api/v1/users/mobile/exist" -d '{"mobile":"13544285662"}'  -i
+     curl -X POST "http://129.28.198.139:9004/weidu/api/v1/users/mobile/exist" -d '{"mobile":"13544285662"}'  -i
          HTTP/1.1 200 OK
          Content-Type: application/json; charset=utf-8
          Date: Sun, 04 Oct 2020 08:12:05 GMT

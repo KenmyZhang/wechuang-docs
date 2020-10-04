@@ -27,7 +27,7 @@ name: 判断邮箱是否已经注册过
     HTTP/1.1 200 OK
 
 ### Example
-     curl -X POST "http://129.28.198.139:8089/weidu/api/v1/users/email/exist" -d '{"email":"zhanhf@qq.com"}'  -i
+     curl -X POST "http://129.28.198.139:9004/weidu/api/v1/users/email/exist" -d '{"email":"zhanhf@qq.com"}'  -i
          HTTP/1.1 200 OK
          Content-Type: application/json; charset=utf-8
          Date: Sun, 04 Oct 2020 08:10:19 GMT

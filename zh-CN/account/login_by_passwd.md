@@ -1,5 +1,5 @@
 ---
-name: 账号密码登录(手机号/邮箱号)
+name: 账号密码登录(手机号)
 ---
     
 ### Url
@@ -14,7 +14,7 @@ name: 账号密码登录(手机号/邮箱号)
 ### Request Payload
     {
         "login_id":"账号（手机号/邮箱号），数据类型string, 必填",
-        "passwd": "密码，数据类型string,必填",
+        "password": "密码，数据类型string,必填",
         "captcha_token":"行为验证token，数据类型string，选填，仅在帐号存在异常的情况下才需要",
         "device_model": "设备型号,数据类型string，目前可以选填，后期做了安全加固后必填",
         "device_name": "设备名称，数据类型string，目前可以选填，后期做了安全加固后必填",
@@ -38,56 +38,55 @@ name: 账号密码登录(手机号/邮箱号)
         	"province": "省份，数据类型string",
         	"country": "国家，数据类型string",
         	"gender": "性别，数据类型string",
-            "level": "等级，数据类型string",
+            "level": "等级，数据类型int",
             "major": "主营，数据类型string",
             "desc": "个人简介，数据类型string",
             "refund_rate": "退款率，数据类型float",
             "dispute_rate": "纠纷率，数据类型float",
         	"roles": "角色，数据类型string",
-            "mobile": "手机号码，数据类型string",
-            "email": "邮箱号码，数据类型string"
             "real_name_verified": "实名认证，数据类型bool"
         }
     }
     
 
 ### Example
-    curl -X POST  "http://129.28.198.139:8089/weidu/api/v1/users/login"  -d '{"login_id":"13544285662", "passwd": "xxxxxx", "captcha_token":"xxxxxx"}'   -i
-        HTTP/1.1 200 OK
-        Content-Type: application/json; charset=utf-8
-        Set-Cookie: WOLVESAUTHTOKEN=n5fknzz7of8n9xkqneshjs89na; Path=/; Domain=129.28.198.139; Expires=xxx, 03 Jan xxx 11:27:59 GMT; HttpOnly
-        Set-Cookie: WOLVESUSERID=4ewj68ux5j8njnshpxraxjuaaa; Path=/; Domain=129.28.198.139; Expires=xxx, 03 Jan xxx 11:27:59 GMT
-        Set-Cookie: WOLVESCSRF=z46keasgcte3pnxwznk81pnk5w; Path=/; Domain=129.28.198.139; Expires=xxx, 03 Jan xxx 11:27:59 GMT
-        Token: n5fknzz7of8n9xkqneshjs89na
-        Date: Fri, 03 xxx xxxx 11:27:59 GMT
-        Content-Length: 295
+    curl -X POST  "http://0:9004/weidu/api/v1/users/login"  -d '{"login_id":"13544285663", "password": "Zk12345678", "captcha_token":"xxxxxx"}'   -i
+            HTTP/1.1 200 OK
+            Content-Type: application/json; charset=utf-8
+            Set-Cookie: weichuangAUTHTOKEN=3r6ebp6gabf6unbee35eu8u6bo; Path=/; Domain=0.0.0.0; Expires=Sun, 04 Oct 2020 09:19:55 GMT; HttpOnly
+            Set-Cookie: weichuangUSERID=7s75e5gin7r9ianisq7ic13pno; Path=/; Domain=0.0.0.0; Expires=Sun, 04 Oct 2020 09:19:55 GMT
+            Set-Cookie: weichuangCSRF=8q7tskhertbqfb74znhhzanpra; Path=/; Domain=0.0.0.0; Expires=Sun, 04 Oct 2020 09:19:55 GMT
+            Token: 3r6ebp6gabf6unbee35eu8u6bo
+            Date: Sun, 04 Oct 2020 09:19:56 GMT
+            Content-Length: 400
 
-    {
-        "result":"ok",
-        "code": 200,
-        "user_info": {
-        	"id": 8970,
-        	"create_at": 1578050603718,
-        	"update_at": 1578050603718,
-        	"username": "hello_ken",
-        	"nickname": "呵呵哒,
-        	"avatar_url": "http://xxxxxxx",
-        	"city": "深圳",
-        	"province": "广东",
-        	"country": "中国",
-        	"gender": "男",
-            "level": "等级xx",
-            "major": "主营xx",
-            "desc": "个人简介",
-            "refund_rate": 0.0,
-            "dispute_rate": 0.0,
-        	"roles": "user",
-            "mobile": "13544285662",
-            "email": "13544285662@163.com"
-            "real_name_verified": true
-        }
-        
-    }
+         {
+         	"code": 200,
+         	"data": {
+         		"id": "7s75e5gin7r9ianisq7ic13pno",
+         		"create_at": 1601802061426,
+         		"update_at": 1601802061426,
+         		"username": "1312679103903567872",
+         		"real_name_verified": false,
+         		"nickname": "",
+         		"avatar_url": "",
+         		"city": "",
+         		"province": "",
+         		"country": "",
+         		"gender": 0,
+         		"language": "",
+         		"position": "",
+         		"roles": "general_user",
+         		"desc": "",
+         		"major": "",
+         		"level": 0,
+         		"refund_rate": 0,
+         		"dispute_rate": 0,
+         		"last_password_update": 0
+         	},
+         	"result": "ok"
+         }
+         
 
 
 

@@ -27,17 +27,14 @@ name: 行为验证码校验
     HTTP/1.1 200 OK
 
 ### Example
-     curl -X POST "http://129.28.198.139:8089/weidu/api/v1/users/behavior/verification" -d '{"captcha_id":"xxxx"}'  -i
+     curl -X POST "http://0:9004/weidu/api/v1/users/behavior/verification" -i -d '{"captcha_id": "xxx"}' 
         HTTP/1.1 200 OK
-        Content-Length: 17
-        Content-Type: application/json
-        Date: Thu, 07 xxx xxx 07:01:47 GMT
-        Keep-Alive: timeout=38
-        X-Request-Id: o85ef6pq3fde7bx7hi3rkahhbr
-        X-Version-Id: 4.0.0.dev.463aa9e9f0c1d9e0d9e24172a4bde3d8
+        Content-Type: application/json; charset=utf-8
+        Date: Sun, 04 Oct 2020 07:34:03 GMT
+        Content-Length: 72
 
     {
-        "result": "ok",
-        "code": 200,
-        "captcha_token":"xxx"
+        "code":200,
+        "result":"ok",
+        "captcha_token":"n5fknzz7of8n9xkqneshjs89na"
     }

@@ -15,7 +15,7 @@ name: 手机号注册
     {
         "mobile":"手机号号，数据类型string, 必填",
         "sms_code": "验证码，数据类型string,必填",
-        "passwd": "密码，数据类型string,必填",
+        "password": "密码，数据类型string,必填",
         "captcha_token":"行为验证token，数据类型string，必填",
         "device_model": "设备型号,数据类型string，目前可以选填，后期做了安全加固后必填",
         "device_name": "设备名称，数据类型string，目前可以选填，后期做了安全加固后必填",
@@ -27,23 +27,65 @@ name: 手机号注册
 ### Response Body
     {
         "result": "成功返回ok，否则返回相应错误详情，数据类型string",
-        "code": "成功返回200，否则返回其他错误码，数据类型int"
+        "code": "成功返回200，否则返回其他错误码，数据类型int",
+        "user_info": {
+        	"id": "用户id，数据类型int",
+        	"create_at": "创建时间,unix时间戳单位s，数据类型int",
+        	"update_at": "更新时间,unix时间戳单位s，数据类型int",
+        	"username": "账号名，数据类型string",
+        	"nickname": "账号昵称，数据类型string",
+        	"avatar_url": "头像，数据类型string",
+        	"city": "城市，数据类型string",
+        	"province": "省份，数据类型string",
+        	"country": "国家，数据类型string",
+        	"gender": "性别，数据类型string",
+            "level": "等级，数据类型int",
+            "major": "主营，数据类型string",
+            "desc": "个人简介，数据类型string",
+            "refund_rate": "退款率，数据类型float",
+            "dispute_rate": "纠纷率，数据类型float",
+        	"roles": "角色，数据类型string",
+            "real_name_verified": "实名认证，数据类型bool"
+        }
     }
     
 
 ### Example
-    curl -X POST  "http://129.28.198.139:8089/weidu/api/v1/users/mobile/signup"  -d '{"mobile":"13544285662", "sms_code": "xxxxxx", "captcha_token":"xxxxxx",  "passwd":"xxx"}'   -i
-        HTTP/1.1 200 OK
-        Content-Type: application/json; charset=utf-8
-        Token: n5fknzz7of8n9xkqneshjs89na
-        Date: Fri, 03 xxx xxxx 11:27:59 GMT
-        Content-Length: 295
-
-    {
-        "result":"ok",
-        "code": 200
-    }
-
-
+      curl -X POST  "http://0:9004/weidu/api/v1/users/mobile/signup"  -d '{"mobile":"13544285663", "sms_code": "068168", "captcha_token":"xxxxxx",  "password":"Zk12345678"}'   -i
+            HTTP/1.1 200 OK
+            Content-Type: application/json; charset=utf-8
+            Set-Cookie: weichuangAUTHTOKEN=fuarnn4g6pn8nr5bj8on9a9j5w; Path=/; Domain=0.0.0.0; Expires=Sun, 04 Oct 2020 09:01:02 GMT; HttpOnly
+            Set-Cookie: weichuangUSERID=7s75e5gin7r9ianisq7ic13pno; Path=/; Domain=0.0.0.0; Expires=Sun, 04 Oct 2020 09:01:02 GMT
+            Set-Cookie: weichuangCSRF=kkoezueqpjrzurgtazzbfkbgpo; Path=/; Domain=0.0.0.0; Expires=Sun, 04 Oct 2020 09:01:02 GMT
+            Token: fuarnn4g6pn8nr5bj8on9a9j5w
+            Date: Sun, 04 Oct 2020 09:01:02 GMT
+            Content-Length: 405
+        
+        {
+        	"code": 200,
+        	"result": "ok",
+        	"user_info": {
+        		"id": "7s75e5gin7r9ianisq7ic13pno",
+        		"create_at": 1601802061426,
+        		"update_at": 1601802061426,
+        		"username": "1312679103903567872",
+        		"real_name_verified": false,
+        		"nickname": "",
+        		"avatar_url": "",
+        		"city": "",
+        		"province": "",
+        		"country": "",
+        		"gender": 0,
+        		"language": "",
+        		"position": "",
+        		"roles": "general_user",
+        		"desc": "",
+        		"major": "",
+        		"level": 0,
+        		"refund_rate": 0,
+        		"dispute_rate": 0,
+        		"last_password_update": 0
+        	}
+        }
 
 

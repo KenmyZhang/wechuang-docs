@@ -3,7 +3,7 @@ name: 手机验证码登录
 ---
     
 ### Url
-    /weidu/api/v1/users/mobile/login
+   /weidu/api/v1/users/mobile/login
     
 ### Method
     POST
@@ -13,7 +13,7 @@ name: 手机验证码登录
 
 ### Request Payload
     {
-        "login_id":"手机号号，数据类型string, 必填",
+        "mobile":"手机号号，数据类型string, 必填",
         "sms_code": "验证码，数据类型string,必填",
         "captcha_token":"行为验证token，数据类型string，必填",
         "device_model": "设备型号,数据类型string，目前可以选填，后期做了安全加固后必填",
@@ -38,57 +38,54 @@ name: 手机验证码登录
         	"province": "省份，数据类型string",
         	"country": "国家，数据类型string",
         	"gender": "性别，数据类型string",
-            "level": "等级，数据类型string",
+            "level": "等级，数据类型int",
             "major": "主营，数据类型string",
             "desc": "个人简介，数据类型string",
             "refund_rate": "退款率，数据类型float",
             "dispute_rate": "纠纷率，数据类型float",
         	"roles": "角色，数据类型string",
-            "mobile": "手机号码，数据类型string",
-            "email": "邮箱号码，数据类型string"
             "real_name_verified": "实名认证，数据类型bool"
         }
     }
     
 
 ### Example
-    curl -X POST  "http://129.28.198.139:8089/weidu/api/v1/users/mobile/login"  -d '{"login_id":"13544285662", "sms_code": "xxxxxx", "captcha_token":"xxxxxx"}'   -i
+    
+    curl -X POST  "http://0:9004/weidu/api/v1/users/mobile/login"  -d '{"mobile":"13544285663", "sms_code": "068168", "captcha_token":"xxxxxx" }'   -i
         HTTP/1.1 200 OK
         Content-Type: application/json; charset=utf-8
-        Set-Cookie: WOLVESAUTHTOKEN=n5fknzz7of8n9xkqneshjs89na; Path=/; Domain=129.28.198.139; Expires=xxx, 03 Jan xxx 11:27:59 GMT; HttpOnly
-        Set-Cookie: WOLVESUSERID=4ewj68ux5j8njnshpxraxjuaaa; Path=/; Domain=129.28.198.139; Expires=xxx, 03 Jan xxx 11:27:59 GMT
-        Set-Cookie: WOLVESCSRF=z46keasgcte3pnxwznk81pnk5w; Path=/; Domain=129.28.198.139; Expires=xxx, 03 Jan xxx 11:27:59 GMT
-        Token: n5fknzz7of8n9xkqneshjs89na
-        Date: Fri, 03 xxx xxxx 11:27:59 GMT
-        Content-Length: 295
+        Set-Cookie: weichuangAUTHTOKEN=eurzagz8ifbj3gzs3u1hsaozao; Path=/; Domain=0.0.0.0; Expires=Sun, 04 Oct 2020 09:15:31 GMT; HttpOnly
+        Set-Cookie: weichuangUSERID=7s75e5gin7r9ianisq7ic13pno; Path=/; Domain=0.0.0.0; Expires=Sun, 04 Oct 2020 09:15:31 GMT
+        Set-Cookie: weichuangCSRF=n4c9eegnnpf6tp714kne4rjxah; Path=/; Domain=0.0.0.0; Expires=Sun, 04 Oct 2020 09:15:31 GMT
+        Token: eurzagz8ifbj3gzs3u1hsaozao
+        Date: Sun, 04 Oct 2020 09:15:31 GMT
+        Content-Length: 405
 
-    {
-        "result":"ok",
-        "code": 200,
-        "user_info": {
-        	"id": 8970,
-        	"create_at": 1578050603718,
-        	"update_at": 1578050603718,
-        	"username": "hello_ken",
-        	"nickname": "呵呵哒,
-        	"avatar_url": "http://xxxxxxx",
-        	"city": "深圳",
-        	"province": "广东",
-        	"country": "中国",
-        	"gender": "男",
-            "level": "等级xx",
-            "major": "主营xx",
-            "desc": "个人简介",
-            "refund_rate": 0.0,
-            "dispute_rate": 0.0,
-        	"roles": "user",
-            "mobile": "13544285662",
-            "email": "13544285662@163.com"
-            "real_name_verified": true
-        }
-        
-    }
-
-
+    {        
+        	"code": 200,
+        	"result": "ok",
+        	"user_info": {
+        		"id": "7s75e5gin7r9ianisq7ic13pno",
+        		"create_at": 1601802061426,
+        		"update_at": 1601802061426,
+        		"username": "1312679103903567872",
+        		"real_name_verified": false,
+        		"nickname": "",
+        		"avatar_url": "",
+        		"city": "",
+        		"province": "",
+        		"country": "",
+        		"gender": 0,
+        		"language": "",
+        		"position": "",
+        		"roles": "general_user",
+        		"desc": "",
+        		"major": "",
+        		"level": 0,
+        		"refund_rate": 0,
+        		"dispute_rate": 0,
+        		"last_password_update": 0
+        	}
+    }        
 
 

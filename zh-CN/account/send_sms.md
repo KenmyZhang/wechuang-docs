@@ -3,7 +3,7 @@ name: 发送手机验证码
 ---
     
 ### Url
-    /weidu/api/v1/users/sendsms
+    /weidu/api/v1/users/mobile/sms
     
 ### Method
     POST
@@ -30,18 +30,18 @@ name: 发送手机验证码
     
 
 ### Example
-    curl -X POST  "http://129.28.198.139:8089/weidu/api/v1/users/sendsms"  -d '{"mobile":"13544285662", "captcha_token":"xxxxxxxx"}'   -i
+    curl -X POST  "http://0:9004/weidu/api/v1/users/mobile/sms"  -d '{"mobile":"13544285662", "captcha_token":"xxxxxxxx"}'   -i
         HTTP/1.1 200 OK
-        Content-Length: 15
-        Content-Type: application/json
-        Date: Wed, 06 xxx xxx 08:50:48 GMT
-        Keep-Alive: timeout=38
-        X-Request-Id: gspaaa38zidzucciep6rgtyxao
-        X-Version-Id: 4.0.0.dev.b88ebfe669ef663bb26f25ac85d6bf0d
+        Content-Type: application/json; charset=utf-8
+        Date: Sun, 04 Oct 2020 08:27:42 GMT
+        Content-Length: 27
 
     {
-        "result":"ok",
-        "code": 200
+        "code":200,
+        "result":"ok"
     }
+
+ ### 备注
+    测试环境并未开启发送验证码，可以直接使用验证码 068168 进行校验   
 
 

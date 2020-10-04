@@ -11,26 +11,31 @@ name: 发布任务
 ### Content-Type
     application/json      
 
+### 限制
+    正式环境需要校验token，token值放在头部参数Authorization, eg： -H "Authorization:Bearer xxxxxx"
+
+    测试环境可以不带token，但需要带上头部参数User-Id, eg: -H "User-Id:123"   
+
 ### Requst Body
-{
-      "creator_id": "创建者id，数据类型int", //测试环境下选填，正式环境不填
-      "industry":"行业,数据类型int，必填",
-      "type":"任务类型,数据类型int，必填",
-      "style":"风格,数据类型int，必填",
-      "hire":"雇佣, 数据类型int，必填",
-      "abstract":"摘要 概要，数据类型string，必填",
-      "desc": "具体需求描述，数据类型string，必填",
-      "transaction_mode":"交易模式，数据类型int，必填"
-      "min_price": "价格范围最小值，数据类型int，必填",
-      "max_price": "价格范围最大值，数据类型int，必填",
-      "start_time": "开始时间，数据类型int，必填",
-      "end_time": "结束时间，数据类型int，必填",
-      "is_top": "是否置顶，默认不置顶false，数据类型bool，选填",
-      "priority": "是否加急优先，默认不加急false，数据类型bool，选填",
-      "block_search": "是否屏蔽搜索，默认不屏蔽false，数据类型bool，选填",
-      "copyright_guard": "版权卫士，默认非版权卫士false，数据类型bool，选填",
-      "agree_protocol": "同意协议，数据类型bool，必填"
- }
+
+    {
+        "industry":"行业,数据类型int，必填",
+        "type":"任务类型,数据类型int，必填",
+        "style":"风格,数据类型int，必填",
+        "hire":"雇佣, 数据类型int，必填",
+        "abstract":"摘要 概要，数据类型string，必填",
+        "desc": "具体需求描述，数据类型string，必填",
+        "transaction_mode":"交易模式，数据类型int，必填"
+        "min_price": "价格范围最小值，数据类型int，必填",
+        "max_price": "价格范围最大值，数据类型int，必填",
+        "start_time": "开始时间，数据类型int，必填",
+        "end_time": "结束时间，数据类型int，必填",
+        "is_top": "是否置顶，默认不置顶false，数据类型bool，选填",
+        "priority": "是否加急优先，默认不加急false，数据类型bool，选填",
+        "block_search": "是否屏蔽搜索，默认不屏蔽false，数据类型bool，选填",
+        "copyright_guard": "版权卫士，默认非版权卫士false，数据类型bool，选填",
+        "agree_protocol": "同意协议，数据类型bool，必填"
+    }
 
 
 
@@ -68,6 +73,17 @@ name: 发布任务
 |   直聘模式|      2 |
 
 
+
+|任务状态 | 编码 |
+|---|---|
+|发布需求| 1|
+|管理需求| 2|
+|制作竞标| 3|
+|托管赏金| 4|
+|需求制作| 5|
+|任务完成| 6|
+
+
 ### Response Body
     {
         "result": "成功返回ok，否则返回相应错误详情，数据类型string",
@@ -92,6 +108,7 @@ name: 发布任务
              "block_search": "是否屏蔽搜索，数据类型bool",
              "copyright_guard": "版权卫士，数据类型bool",
              "agree_protocol": "同意协议，数据类型bool",
+             "requirements": "参与要求，数据类型string",
              "update_time":"更新时间，数据类型int",
              "create_time": "创建时间，数据类型int"
         } 

@@ -3,7 +3,7 @@ name: 开始使用 START
 ---
     
 ### Url
-     /weidu/api/v1/homepage/start/list
+     /weidu/api/v1/homepage/startlist
     
 ### Method
     GET
@@ -19,7 +19,7 @@ name: 开始使用 START
         "code": "成功返回200，否则返回其他错误码，数据类型int",
         "list": [
             {
-                "action_type":"操作类型，包括发布1、监制2、制作3，数据类型int",
+                "id":"操作类型id，包括发布1、监制2、制作3，数据类型int",
                 "name": "名称，数据类型string",
                 "cover_link":"封面链接，数据类型string"
             }
@@ -30,33 +30,27 @@ name: 开始使用 START
     HTTP/1.1 200 OK
 
 ### Example
-     curl -X POST "http://129.28.198.139:8089/weidu/api/v1/homepage/start/list"  -i
-        HTTP/1.1 200 OK
-        Content-Length: 17
-        Content-Type: application/json
-        Date: Thu, 07 xxx xxx 07:01:47 GMT
-        Keep-Alive: timeout=38
-        X-Request-Id: o85ef6pq3fde7bx7hi3rkahhbr
-        X-Version-Id: 4.0.0.dev.463aa9e9f0c1d9e0d9e24172a4bde3d8
+     
+        curl -X GET "http://129.28.198.139:9004/weidu/api/v1/homepage/startlist" -i 
+            HTTP/1.1 200 OK
+            Content-Type: application/json; charset=utf-8
+            Date: Sun, 04 Oct 2020 12:07:00 GMT
+            Content-Length: 395
 
-    {
-        "result": "ok",
-        "code": 200,
-        "list": [
-            {
-                "action_type":"publish",
+        {
+            "code": 200,
+            "list": [{
+                "id": 1,
                 "name": "发布",
-                "cover_link":"http://xxx"
-            },
-            {
-                "action_type":"superintend",
+                "cover_link": "20201004/users/123/p75zea7ze3n8z8rw4tkrrhjfwh/fabu.jpg"
+            }, {
+                "id": 2,
                 "name": "监制",
-                "cover_link":"http://xxx"
-            },
-            {
-                "action_type":"make",
-                "name":"制作",
-                "cover_link":"http://xxx"
-            }
-        ]
-    }
+                "cover_link": "20201004/users/123/p75zea7ze3n8z8rw4tkrrhjfwh/jianzhi.jpg"
+            }, {
+                "id": 3,
+                "name": "制作",
+                "cover_link": "20201004/users/123/p75zea7ze3n8z8rw4tkrrhjfwh/zhizuo.jpg"
+            }],
+            "result": "ok"
+        }

@@ -38,19 +38,19 @@ name: 开始使用 START
             Content-Length: 395
 
         {
-            "code": 200,
-            "list": [{
-                "id": 1,
-                "name": "发布",
-                "cover_link": "20201004/users/123/p75zea7ze3n8z8rw4tkrrhjfwh/fabu.jpg"
-            }, {
-                "id": 2,
-                "name": "监制",
-                "cover_link": "20201004/users/123/p75zea7ze3n8z8rw4tkrrhjfwh/jianzhi.jpg"
-            }, {
-                "id": 3,
-                "name": "制作",
-                "cover_link": "20201004/users/123/p75zea7ze3n8z8rw4tkrrhjfwh/zhizuo.jpg"
-            }],
-            "result": "ok"
+        	"code": 200,
+        	"list": [{
+        		"id": 1,
+        		"name": "发布",
+        		"cover_link": "20201004/users/123/p75zea7ze3n8z8rw4tkrrhjfw/fabu.jpg"
+        	}, {
+        		"id": 2,
+        		"name": "监制",
+        		"cover_link": "20201004/users/123/p75zea7ze3n8z8rw4tkrrhjfw/jianzhi.jpg"
+        	}, {
+        		"id": 3,
+        		"name": "制作",
+        		"cover_link": "20201004/users/123/p75zea7ze3n8z8rw4tkrrhjfw/zhizuo.jpg"
+        	}],
+        	"result": "ok"
         }

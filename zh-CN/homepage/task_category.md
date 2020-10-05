@@ -43,33 +43,27 @@ name: 行业列表
             Date: Sun, 04 Oct 2020 13:44:48 GMT
             Content-Length: 551
         {
-            "code":200,
-            "list":[
-                {
-                    "id":1,
-                    "name":"游戏",
-                    "cover_link":"20201004/users/123/p75zea7ze3n8z8rw4tkrrhjfw/youxi.jpg"
-                },
-                {
-                    "id":2,
-                    "name":"漫画",
-                    "cover_link":"20201004/users/123/p75zea7ze3n8z8rw4tkrrhjfw/manhua.jpg"
-                },
-                {
-                    "id":3,
-                    "name":"动漫",
-                    "cover_link":"20201004/users/123/p75zea7ze3n8z8rw4tkrrhjfw/dongman.jpg"
-                },
-                {
-                    "id":4,
-                    "name":"创意",
-                    "cover_link":"20201004/users/123/p75zea7ze3n8z8rw4tkrrhjfw/chuangyi.jpg"
-                },
-                {
-                    "id":5,
-                    "name":"影视",
-                    "cover_link":"20201004/users/123/p75zea7ze3n8z8rw4tkrrhjfw/movie.jpg"
-                }
-            ],
-            "result":"ok"
+        	"code": 200,
+        	"list": [{
+        		"id": 1,
+        		"name": "游戏",
+        		"cover_link": "20201004/users/123/p75zea7ze3n8z8rw4tkrrhjfw/youxi.jpg"
+        	}, {
+        		"id": 2,
+        		"name": "漫画",
+        		"cover_link": "20201004/users/123/p75zea7ze3n8z8rw4tkrrhjfw/manhua.jpg"
+        	}, {
+        		"id": 3,
+        		"name": "动漫",
+        		"cover_link": "20201004/users/123/p75zea7ze3n8z8rw4tkrrhjfw/dongman.jpg"
+        	}, {
+        		"id": 4,
+        		"name": "创意",
+        		"cover_link": "20201004/users/123/p75zea7ze3n8z8rw4tkrrhjfw/chuangyi.jpg"
+        	}, {
+        		"id": 5,
+        		"name": "影视",
+        		"cover_link": "20201004/users/123/p75zea7ze3n8z8rw4tkrrhjfw/movie.jpg"
+        	}],
+        	"result": "ok"
         }

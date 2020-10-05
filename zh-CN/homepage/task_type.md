@@ -62,21 +62,21 @@ name: 类型列表
         Date: Mon, 05 Oct 2020 08:57:09 GMT
         Content-Length: 276
         
-        {
+       {         
         	"code": 200,
         	"list": [{
         		"id": 6,
-        		"name": "è§’è‰²",
+        		"name": "角色",
         		"cover_link": "20201004/users/123/p75zea7ze3n8z8rw4tkrrhjfw/juese.jpg",
         		"industry_id": 2
         	}, {
         		"id": 7,
-        		"name": "åˆ†é•œ",
+        		"name": "分镜",
         		"cover_link": "20201004/users/123/p75zea7ze3n8z8rw4tkrrhjfw/fenjing.jpg",
         		"industry_id": 2
         	}],
         	"result": "ok"
-        }
+        }        
         
 
     curl -X POST "http://129.28.198.139:9004/weidu/api/v1/homepage/task/type/list" -i -d '{"industry_id":2}'
@@ -85,34 +85,34 @@ name: 类型列表
         Date: Mon, 05 Oct 2020 08:59:05 GMT
         Content-Length: 638
 
-    {
-    	"code": 200,
-    	"list": [{
-    		"id": 6,
-    		"name": "è§’è‰²",
-    		"cover_link": "20201004/users/123/p75zea7ze3n8z8rw4tkrrhjfw/juese.jpg",
-    		"industry_id": 2
-    	}, {
-    		"id": 7,
-    		"name": "åˆ†é•œ",
-    		"cover_link": "20201004/users/123/p75zea7ze3n8z8rw4tkrrhjfw/fenjing.jpg",
-    		"industry_id": 2
-    	}, {
-    		"id": 8,
-    		"name": "çº¿ç¨¿",
-    		"cover_link": "20201004/users/123/p75zea7ze3n8z8rw4tkrrhjfw/xiangao.jpg",
-    		"industry_id": 2
-    	}, {
-    		"id": 9,
-    		"name": "ä¸Šè‰²",
-    		"cover_link": "20201004/users/123/p75zea7ze3n8z8rw4tkrrhjfw/shangse.jpg",
-    		"industry_id": 2
-    	}, {
-    		"id": 10,
-    		"name": "æ•´å¥—",
-    		"cover_link": "20201004/users/123/p75zea7ze3n8z8rw4tkrrhjfw/zhengtao.jpg",
-    		"industry_id": 2
-    	}],
-    	"result": "ok"
-    }
-        
+    
+        {
+        	"code": 200,
+        	"list": [{
+        		"id": 6,
+        		"name": "角色",
+        		"cover_link": "20201004/users/123/p75zea7ze3n8z8rw4tkrrhjfw/juese.jpg",
+        		"industry_id": 2
+        	}, {
+        		"id": 7,
+        		"name": "分镜",
+        		"cover_link": "20201004/users/123/p75zea7ze3n8z8rw4tkrrhjfw/fenjing.jpg",
+        		"industry_id": 2
+        	}, {
+        		"id": 8,
+        		"name": "线稿",
+        		"cover_link": "20201004/users/123/p75zea7ze3n8z8rw4tkrrhjfw/xiangao.jpg",
+        		"industry_id": 2
+        	}, {
+        		"id": 9,
+        		"name": "上色",
+        		"cover_link": "20201004/users/123/p75zea7ze3n8z8rw4tkrrhjfw/shangse.jpg",
+        		"industry_id": 2
+        	}, {
+        		"id": 10,
+        		"name": "整套",
+        		"cover_link": "20201004/users/123/p75zea7ze3n8z8rw4tkrrhjfw/zhengtao.jpg",
+        		"industry_id": 2
+        	}],
+        	"result": "ok"
+        }

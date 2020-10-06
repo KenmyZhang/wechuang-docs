@@ -1,5 +1,5 @@
 ---
-name: 编辑个人信息
+name: 查询个人信息
 ---
     
 ### Url
@@ -41,6 +41,8 @@ name: 编辑个人信息
             "dispute_rate": "纠纷率，数据类型float",
             "serve_num": "服务数量，数据类型int",
         	"work_num": "作品数,数据类型int",
+            "mobile": "电话号码，若手机验证过，该字段返回打码后的字符串，否则不返回该字段，数据类型string",
+            "email": "邮箱号码，若手机验证过，该字段返回打码后的字符串，否则不返回该字段，数据类型string",
             "last_password_update": "最后更新密码时间，unix时间戳单位s，数据类型int"
         }
     }
@@ -48,7 +50,7 @@ name: 编辑个人信息
 
 ### Example
 
-    curl -X GET "http://0:9004/weidu/api/v1/users/info?user_id=erb4krcbbirbtcwnhwopeizz5o" -i 
+    curl -X GET "http://129.28.198.139:9004/weidu/api/v1/users/info?user_id=erb4krcbbirbtcwnhwopeizz5o" -i 
         HTTP/1.1 200 OK
         Content-Type: application/json; charset=utf-8
         Date: Tue, 06 Oct 2020 06:36:40 GMT

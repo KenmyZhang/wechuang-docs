@@ -28,23 +28,26 @@ name: 手机验证码登录
         "result": "成功返回ok，否则返回相应错误详情，数据类型string",
         "code": "成功返回200，否则返回其他错误码，数据类型int",
         "user_info": {
-        	"id": "用户id，数据类型int",
+        	"id": "用户id，数据类型string",
         	"create_at": "创建时间,unix时间戳单位s，数据类型int",
         	"update_at": "更新时间,unix时间戳单位s，数据类型int",
         	"username": "账号名，数据类型string",
+            "real_name_verified": "实名认证，数据类型bool",
         	"nickname": "账号昵称，数据类型string",
         	"avatar_url": "头像，数据类型string",
         	"city": "城市，数据类型string",
         	"province": "省份，数据类型string",
         	"country": "国家，数据类型string",
         	"gender": "性别，数据类型string",
-            "level": "等级，数据类型int",
-            "major": "主营，数据类型string",
+            "roles": "角色，数据类型string",
             "desc": "个人简介，数据类型string",
+            "level": "等级，数据类型string",
+            "major": "主营，数据类型string",
             "refund_rate": "退款率，数据类型float",
             "dispute_rate": "纠纷率，数据类型float",
-        	"roles": "角色，数据类型string",
-            "real_name_verified": "实名认证，数据类型bool"
+            "serve_num": "服务数量，数据类型int",
+        	"work_num": "作品数,数据类型int",
+            "last_password_update": "最后更新密码时间，unix时间戳单位s，数据类型int"
         }
     }
     
@@ -61,14 +64,15 @@ name: 手机验证码登录
         Date: Sun, 04 Oct 2020 09:15:31 GMT
         Content-Length: 405
 
-    {        
+        {
         	"code": 200,
         	"result": "ok",
         	"user_info": {
-        		"id": "7s75e5gin7r9ianisq7ic13pno",
-        		"create_at": 1601802061426,
-        		"update_at": 1601802061426,
-        		"username": "1312679103903567872",
+        		"id": "7wnaasfa47bebbtjbazajef3eh",
+        		"create_at": 1601963204584,
+        		"update_at": 1601963204584,
+        		"username": "1313354987295739904",
+        		"mobile": "******",
         		"real_name_verified": false,
         		"nickname": "",
         		"avatar_url": "",
@@ -76,16 +80,16 @@ name: 手机验证码登录
         		"province": "",
         		"country": "",
         		"gender": 0,
-        		"language": "",
-        		"position": "",
         		"roles": "general_user",
         		"desc": "",
         		"major": "",
-        		"level": 0,
+        		"level": "",
         		"refund_rate": 0,
         		"dispute_rate": 0,
+        		"serve_num": 0,
+        		"work_num": 0,
         		"last_password_update": 0
         	}
-    }        
+        }        
 
 

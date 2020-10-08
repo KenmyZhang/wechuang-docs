@@ -25,18 +25,18 @@ name: 发布任务
         "hire":"雇佣, 数据类型int，必填",
         "abstract":"摘要 概要，数据类型string，必填",
         "desc": "具体需求描述，数据类型string，必填",
+        "attachments": "附件id列表，多个附件用逗号分割，数据类型string，选填",
         "transaction_mode":"交易模式，数据类型int，必填"
         "min_price": "价格范围最小值，数据类型int，必填",
         "max_price": "价格范围最大值，数据类型int，必填",
-        "start_time": "开始时间，数据类型int，必填",
-        "end_time": "结束时间，数据类型int，必填",
+        "start_time": "开始时间，unix时间戳，单位毫秒，数据类型int，必填",
+        "end_time": "结束时间,unix时间戳，单位毫秒，数据类型int，必填",
         "is_top": "是否置顶，默认不置顶false，数据类型bool，选填",
         "priority": "是否加急优先，默认不加急false，数据类型bool，选填",
         "block_search": "是否屏蔽搜索，默认不屏蔽false，数据类型bool，选填",
         "copyright_guard": "版权卫士，默认非版权卫士false，数据类型bool，选填",
         "agree_protocol": "同意协议，数据类型bool，必填"
     }
-
 
 
 | 行业 | 编码 |
@@ -69,7 +69,7 @@ name: 发布任务
 |   写实|     1 |
 |   卡通|      2 |
 
-| 雇佣模式 | 编码 |
+| 雇佣 | 编码 |
 |---|---|
 |   团队|     1 |
 |   个人|      2 |
@@ -98,13 +98,14 @@ name: 发布任务
         "code": "成功返回200，否则返回其他错误码，数据类型int",
         "data": {
              "id": "任务id，数据类型int",
-             "creator_id": "创建者id，数据类型int",
+             "creator_id": "创建者id，数据类型string",
              "industry":"行业,数据类型int",
              "type":"任务类型,数据类型int",
              "style":"风格,数据类型int",
              "hire":"雇佣, 数据类型int",
              "abstract":"摘要 概要，数据类型string",
              "desc": "具体需求描述，数据类型string",
+             "attachments": "附件id列表，多个附件用逗号分割，数据类型string",
              "status": "任务状态，数据类型int",
              "transaction_mode":"交易模式，数据类型int"
              "min_price": "价格范围最小值，数据类型int",
@@ -127,36 +128,38 @@ name: 发布任务
 
 ### Example
 
-    curl -X POST "http://0:9004/weidu/api/v1/task/publish" -i -d '{"creator_id": 123, "industry":1, "type":1, "style":1, "hire":1, "abstract":"xxxxxabstract", "desc":"xxxxdesc", "transaction_mode":1, "min_price":123, "max_price":568, "start_time":343, "end_time":8987, "is_top":true,  "priority":true, "block_search":true, "copyright_guard":true, "agree_protocol":true}' -i
+    curl -X POST "http://0:9004/weidu/api/v1/task/publish" -i -d '{"creator_id": "erb4krcbbirbtcwnhwopeizz5o","industry":1, "type":1,"style": 1, "hire": 1,"abstract":"摘要 概要","desc": "具体需求描述","attachments": "xxxxxx","transaction_mode": 1,"min_price": 1000,"max_price": 2000,"start_time": 1602129479000,"end_time": 1602139479000 ,"is_top": true,  "priority": true, "block_search": true, "copyright_guard": true,"agree_protocol": true}' -H "Content-Type:application/json"
          HTTP/1.1 201 Created
          Content-Type: application/json; charset=utf-8
-         Date: Thu, 01 Oct 2020 13:03:12 GMT
-         Content-Length: 383
-
+         Date: Thu, 08 Oct 2020 04:06:01 GMT
+         Content-Length: 464
+         
     {
-      "code": 200,
-      "result": "ok",
-      "data": {
-        "id": 4,
-        "creator_id": 123,
-        "industry": 1,
-        "type": 1,
-        "style": 1,
-        "hire": 1,
-        "abstract": "xxxxxabstract",
-        "desc": "xxxxdesc",
-        "status":1,
-        "transaction_mode": 1,
-        "min_price": 123,
-        "max_price": 568,
-        "start_time": 343,
-        "end_time": 8987,
-        "is_top": true,
-        "priority": true,
-        "block_search": true,
-        "copyright_guard": true,
-        "agree_protocol": true,
-        "update_time": 1601557392423,
-        "create_time": 1601557392423
-      }
+    	"code": 200,
+    	"data": {
+    		"id": 1,
+    		"creator_id": "erb4krcbbirbtcwnhwopeizz5o",
+    		"industry": 1,
+    		"type": 1,
+    		"style": 1,
+    		"hire": 1,
+    		"abstract": "摘要 概要",
+    		"desc": "具体需求描述",
+    		"attachments": "xxxxxx",
+    		"status": 1,
+    		"transaction_mode": 1,
+    		"min_price": 1000,
+    		"max_price": 2000,
+    		"start_time": 1602129479000,
+    		"end_time": 1602139479000,
+    		"is_top": true,
+    		"priority": true,
+    		"block_search": true,
+    		"copyright_guard": true,
+    		"agree_protocol": true,
+    		"requirements": "",
+    		"update_time": 1602129960985,
+    		"create_time": 1602129960985
+    	},
+    	"result": "ok"
     }

@@ -60,7 +60,7 @@ name: 编辑个人信息
     
 
 ### Example
-    curl -X PUT "http://0:9004/weidu/api/v1/users/update" -i -d '{"id":"erb4krcbbirbtcwnhwopeizz5o","username":"z3133549872957399","nickname":"","avatar_url":"","city":"","province":"","country":"","gender":0,"desc":"","major":""}' 
+    curl -X PUT "http://129.28.198.139:9004/weidu/api/v1/users/update" -i -d '{"id":"erb4krcbbirbtcwnhwopeizz5o","username":"z3133549872957399","nickname":"","avatar_url":"","city":"","province":"","country":"","gender":0,"desc":"","major":""}' 
         HTTP/1.1 200 OK
         Content-Type: application/json; charset=utf-8
         Date: Tue, 06 Oct 2020 06:18:40 GMT

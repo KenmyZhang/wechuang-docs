@@ -15,8 +15,9 @@ name: 通过手机验证码重置密码
     {
         "mobile":"手机号号，数据类型string, 必填",
         "sms_code": "验证码，数据类型string,必填",
-        "captcha_token":"行为验证token，数据类型string，必填",
         "password": "密码，数据类型string,必填",
+        
+        "captcha_token":"行为验证token，目前可以选填，后期做了安全加固后必填",
         "device_model": "设备型号,数据类型string，目前可以选填，后期做了安全加固后必填",
         "device_name": "设备名称，数据类型string，目前可以选填，后期做了安全加固后必填",
         "timestamp": "发送验证码时间，unix时间戳单位s，数据类型int，目前可以选填后期做了安全加固后必填",

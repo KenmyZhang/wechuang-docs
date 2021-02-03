@@ -6,7 +6,7 @@ name: 上传个人作品
     /weidu/api/v1/files
     
 ### Method
-    GET
+    POST
 
 ### Content-Type
     application/json    

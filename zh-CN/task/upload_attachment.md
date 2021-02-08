@@ -27,7 +27,7 @@ name: 上传附件到任务中
      "result": "成功返回ok，否则返回相应错误详情，数据类型string",
      "code": "成功返回200，否则返回其他错误码，数据类型int",
 	 "data": {
-     		"file_infos": [{
+     	"file_infos": [{
      		"id": "文件id，数据类型string",
             "task_id": "文件id，数据类型string",
      		"user_id": "用户id，数据类型string",

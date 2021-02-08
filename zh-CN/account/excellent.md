@@ -12,8 +12,8 @@ name: 优秀设计师列表
     application/json    
 
 ### Query Param
-        	"per_page": "每页记录数"
-            "page":"第几页"
+    per_page: 每页返回记录数，数据类型int
+    page: 第几页,数据类型int
 
 ### Response Body
     {
@@ -26,7 +26,7 @@ name: 优秀设计师列表
                 "desc": "用户简介，数据类型string",
                 "avatar_url": "用户头像，数据类型string",
                 "award_info": "获奖情况，数据类型string",
-                "comment_cnt": "评论数，数据类型int",
+                "score": "评分，数据类型int",
                 "like_cnt": "点赞数,数据类型int",
                 "view_cnt": "浏览数,数据类型int"
             }]
@@ -35,11 +35,13 @@ name: 优秀设计师列表
 
 ### Example
 
-    curl -X GET "http://0:9004/weidu/api/v1/users/excellent/list?per_page=5" -i
+   curl -X GET "http://0:9004/weidu/api/v1/users/excellent/list?per_page=5" -i
+
+
         HTTP/1.1 200 OK
         Content-Type: application/json; charset=utf-8
-        Date: Mon, 08 Feb 2021 08:28:46 GMT
-        Content-Length: 1024
+        Date: Mon, 08 Feb 2021 09:49:29 GMT
+        Content-Length: 964
 
     {
         "code": 200,
@@ -48,7 +50,7 @@ name: 优秀设计师列表
             "user_name": "1356941491057987584",
             "desc": "2221æè¿°",
             "avatar_url": "20210208/users/esbng8qjsfn5jr355ikcr4aajr/nna9k8znspbninexatfz34fxga/fabu.jpg",
-            "award_info": "多次获奖",
+            "score": "70",
             "comment_cnt": 4,
             "like_cnt": 5,
             "view_cnt": 5
@@ -57,7 +59,7 @@ name: 优秀设计师列表
             "user_name": "1356941446602559488",
             "desc": "5621æè¿°",
             "avatar_url": "20210208/users/bjg5k3er6inf8ce16onhnhb8we/nikjo4waktreiban6fn9aeib5o/zhizuo.jpeg",
-            "award_info": "多次获奖",
+            "score": "70",
             "comment_cnt": 0,
             "like_cnt": 0,
             "view_cnt": 0
@@ -66,7 +68,7 @@ name: 优秀设计师列表
             "user_name": "1356941364390006784",
             "desc": "1æè¿°",
             "avatar_url": "20210208/users/szasc68seig9jrhqw4eaj9gu3h/e5asiqn49tgz8pnru1rj6hnz9c/jianzhi.jpg",
-            "award_info": "多次获奖",
+            "score": "70",
             "comment_cnt": 1,
             "like_cnt": 3,
             "view_cnt": 0
@@ -75,7 +77,7 @@ name: 优秀设计师列表
             "user_name": "1356932923411927040",
             "desc": "æè¿°",
             "avatar_url": "",
-            "award_info": "多次获奖",
+            "score": "70",
             "comment_cnt": 0,
             "like_cnt": 0,
             "view_cnt": 0

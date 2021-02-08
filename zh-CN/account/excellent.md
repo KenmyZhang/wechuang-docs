@@ -35,7 +35,7 @@ name: 优秀设计师列表
 
 ### Example
 
-   curl -X GET "http://0:9004/weidu/api/v1/users/excellent/list?per_page=5" -i
+   curl -X GET "http://129.28.198.139:9004/weidu/api/v1/users/excellent/list?per_page=5" -i
 
 
         HTTP/1.1 200 OK

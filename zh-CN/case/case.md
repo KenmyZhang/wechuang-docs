@@ -63,7 +63,7 @@ name: 客户案例
 
 ### Example
 
-    curl -X GET "http://0:9004/weidu/api/v1/cases/list?industry_type=1&per_page=5" -i
+    curl -X GET "http://129.28.198.139:9004/weidu/api/v1/cases/list?industry_type=1&per_page=5" -i
         HTTP/1.1 200 OK
         Content-Type: application/json; charset=utf-8
         Date: Mon, 08 Feb 2021 09:36:43 GMT

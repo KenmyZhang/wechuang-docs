@@ -17,7 +17,7 @@ name: 获取入驻信息
 ### Response Body
     {
         "result": "成功返回ok，否则返回相应错误详情，数据类型string",
-        "code": "成功返回200，否则返回其他错误码，数据类型int" 
+        "code": "成功返回200，否则返回其他错误码，数据类型int", 
         "data": {
             "user_id": "用户ID，数据类型string",
             "avatar_url": "头像地址，数据类型string",
@@ -49,8 +49,7 @@ name: 获取入驻信息
                     "has_pre_img": "是否有预览图，数据类型bool"
                 }]
             }]
-        },
-        "result": "ok"
+        }
     }
     
 

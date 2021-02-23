@@ -7,9 +7,11 @@ name: 支付宝登录
     http://weiduchuangzao.xyz/weidu/api/v1/users/alipay/auth_url
 
 
-    中间url：  https://openauth.alipay.com/oauth2/publicAppAuthorize.htm?app_id=2021002128644356&scope=auth_user&redirect_uri=http://weiduchuangzao.xyz/auth/redirect
 
-  ### 回调接口返回样例
+### 中间URL（前端无需调用，302跳转）
+
+    https://openauth.alipay.com/oauth2/publicAppAuthorize.htm?app_id=2021002128644356&scope=auth_user&redirect_uri=http://weiduchuangzao.xyz/auth/redirect
+### 回调接口样例（前端无需调用，微信回调该接口）
 
     curl 'http://weiduchuangzao.xyz/auth/redirect?app_id=2021002128644356&source=alipay_wallet&scope=auth_user&auth_code=275864cc74604d7a8a2c6e179606ZX02' \
       -H 'Connection: keep-alive' \
@@ -33,5 +35,3 @@ name: 支付宝登录
     Set-Cookie: weichuangCSRF=jfp8haz3o38h8ntkuiw35cpoew; Path=/; Domain=0.0.0.0; Expires=Mon, 22 Feb 2021 06:24:13 GMT
     Token: wtfeio3zojb99k5xk9asx98anw
     X-Request-Id: ehoijgsoapgaek6iauaakquwpw
-
-

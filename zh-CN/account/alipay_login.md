@@ -4,13 +4,12 @@ name: 支付宝登录
     
 ### 前端访问链接
 
-    https://openauth.alipay.com/oauth2/publicAppAuthorize.htm?app_id=2021002128644356&scope=auth_user&redirect_uri=http://weiduchuangzao.xyz/auth/redirect
-
-    app_id 、scope 、redirect_uri可配置
+    http://weiduchuangzao.xyz/weidu/api/v1/users/alipay/auth_url
 
 
+    中间url：  https://openauth.alipay.com/oauth2/publicAppAuthorize.htm?app_id=2021002128644356&scope=auth_user&redirect_uri=http://weiduchuangzao.xyz/auth/redirect
 
-### 回调接口样例
+  ### 回调接口返回样例
 
     curl 'http://weiduchuangzao.xyz/auth/redirect?app_id=2021002128644356&source=alipay_wallet&scope=auth_user&auth_code=275864cc74604d7a8a2c6e179606ZX02' \
       -H 'Connection: keep-alive' \

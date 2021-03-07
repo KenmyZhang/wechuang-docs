@@ -13,7 +13,7 @@ name: 评论
 
 ### Request Payload
     {
-        "res_type":"资源类型, 数据类型string,必填",
+        "res_type":"资源类型：设计师 1、优秀案例2  数据类型string,必填",
         "res_id": "资源ID，数据类型string,必填",
         "content": "内容，数据类型string,必填"
     }

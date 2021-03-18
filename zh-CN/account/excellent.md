@@ -22,66 +22,61 @@ name: 优秀设计师列表
         "total": "总记录数，数据类型int",
         "data": [{
                 "user_id": "用户ID，数据类型string",
-                "user_name": "用户名，数据类型string",
+                "nickname": "用户昵称，数据类型string",
                 "desc": "用户简介，数据类型string",
                 "avatar_url": "用户头像，数据类型string",
-                "award_info": "获奖情况，数据类型string",
-                "score": "评分，数据类型int",
-                "like_cnt": "点赞数,数据类型int",
-                "view_cnt": "浏览数,数据类型int"
+                "title": "头衔,数据类型int"
             }]
     }
     
 
 ### Example
 
-   curl -X GET "http://129.28.198.139:9004/weidu/api/v1/users/excellent/list?per_page=5" -i
-
-
+    curl -X GET "http://www.weiduchuangzao.com:9004/weidu/api/v1/users/excellent/list?per_page=5" -i
         HTTP/1.1 200 OK
         Content-Type: application/json; charset=utf-8
-        Date: Mon, 08 Feb 2021 09:49:29 GMT
-        Content-Length: 964
+        Date: Thu, 18 Mar 2021 13:53:52 GMT
+        Content-Length: 1092
 
     {
-        "code": 200,
-        "data": [{
-            "user_id": "esbng8qjsfn5jr355ikcr4aajr",
-            "user_name": "1356941491057987584",
-            "desc": "2221æè¿°",
-            "avatar_url": "20210208/users/esbng8qjsfn5jr355ikcr4aajr/nna9k8znspbninexatfz34fxga/fabu.jpg",
-            "score": "70",
-            "comment_cnt": 4,
-            "like_cnt": 5,
-            "view_cnt": 5
-        }, {
-            "user_id": "bjg5k3er6inf8ce16onhnhb8we",
-            "user_name": "1356941446602559488",
-            "desc": "5621æè¿°",
-            "avatar_url": "20210208/users/bjg5k3er6inf8ce16onhnhb8we/nikjo4waktreiban6fn9aeib5o/zhizuo.jpeg",
-            "score": "70",
-            "comment_cnt": 0,
-            "like_cnt": 0,
-            "view_cnt": 0
-        }, {
-            "user_id": "szasc68seig9jrhqw4eaj9gu3h",
-            "user_name": "1356941364390006784",
-            "desc": "1æè¿°",
-            "avatar_url": "20210208/users/szasc68seig9jrhqw4eaj9gu3h/e5asiqn49tgz8pnru1rj6hnz9c/jianzhi.jpg",
-            "score": "70",
-            "comment_cnt": 1,
-            "like_cnt": 3,
-            "view_cnt": 0
-        }, {
-            "user_id": "b1onnbw3ebbjtenaco9fxa16ke",
-            "user_name": "1356932923411927040",
-            "desc": "æè¿°",
-            "avatar_url": "",
-            "score": "70",
-            "comment_cnt": 0,
-            "like_cnt": 0,
-            "view_cnt": 0
-        }],
-        "result": "ok",
-        "total": 4
+        "code":200,
+        "data":[
+            {
+                "user_id":"o4cnejab1ff1tece3et8xajaxw",
+                "nickname":"Ken飞哥",
+                "desc":"优秀设计师介绍。。。。。。",
+                "avatar_url":"https://tfs.alipayobjects.com/images/partner/T1jT0bXb8XXXXXXXXX",
+                "title":"总监"
+            },
+            {
+                "user_id":"esbng8qjsfn5jr355ikcr4aajr",
+                "nickname":"",
+                "desc":"优秀设计师介绍。。。。。。",
+                "avatar_url":"20210208/users/esbng8qjsfn5jr355ikcr4aajr/nna9k8znspbninexatfz34fxga/fabu.jpg",
+                "title":"总监"
+            },
+            {
+                "user_id":"bjg5k3er6inf8ce16onhnhb8we",
+                "nickname":"1150910",
+                "desc":"优秀设计师介绍。。。。。。",
+                "avatar_url":"20210208/users/bjg5k3er6inf8ce16onhnhb8we/nikjo4waktreiban6fn9aeib5o/zhizuo.jpeg",
+                "title":"总监"
+            },
+            {
+                "user_id":"szasc68seig9jrhqw4eaj9gu3h",
+                "nickname":"1150911",
+                "desc":"优秀设计师介绍。。。。。。",
+                "avatar_url":"20201004/users/123/biinjhnesifeiasftws8a6q95r/jianzhi.jpg",
+                "title":"总监"
+            },
+            {
+                "user_id":"b1onnbw3ebbjtenaco9fxa1611",
+                "nickname":"112",
+                "desc":"优秀设计师介绍。。。。。。",
+                "avatar_url":"20201004/users/123/biinjhnesifeiasftws8a6q95r/jianzhi.jpg",
+                "title":"总监"
+            }
+        ],
+        "result":"ok",
+        "total":18
     }

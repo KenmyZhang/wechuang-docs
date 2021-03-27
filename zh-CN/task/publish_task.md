@@ -14,7 +14,7 @@ name: 发布任务
 ### 限制
     正式环境需要校验token，token值放在头部参数Authorization, eg： -H "Authorization:Bearer xxxxxx"
 
-    测试环境可以不带token，但需要带上头部参数User-Id, eg: -H "User-Id:123"   
+    测试环境可以不带token，但需要带上头部参数User-Id, eg: -H "User-Id:erb4krcbbirbtcwnhwopeizz5o"   
 
 ### Requst Body
 
@@ -39,13 +39,15 @@ name: 发布任务
     }
 
 
+
 | 行业 | 编码 |
 |---|---|
 |   游戏|     1 |
-|   漫画|      2 |
+| UI/UX | 2|
 |   动漫|      3 |
-|   创意 |     4   |
-|   影视 |     5   |
+|   影视 |     4   |
+|   产品 |     5   |
+|   建筑 |     6   |
 
 |行业| 类型 | 编码 |
 |--- |---|---|
@@ -58,11 +60,11 @@ name: 发布任务
 
 |行业| 类型 | 编码 |
 |---|---|---|
-|漫画 2 |   角色|     6|
-|漫画 2 |   分镜|      7 |
-|漫画 2 |   线稿|      8 |
-|漫画 2 |   上色 |     9   |
-|漫画 2 |   整套 |     10   |
+|动漫 2 |   角色|     6|
+|动漫 2 |   分镜|      7 |
+|动漫 2 |   线稿|      8 |
+|动漫 2 |   上色 |     9   |
+|动漫 2 |   整套 |     10   |
 
 | 风格 | 编码 |
 |---|---|
@@ -85,8 +87,8 @@ name: 发布任务
 |任务状态 | 编码 |
 |---|---|
 |发布需求| 1|
-|管理需求| 2|
-|制作竞标| 3|
+|总监竞标| 2|
+|设计竞标| 3|
 |托管赏金| 4|
 |需求制作| 5|
 |任务完成| 6|
@@ -128,38 +130,39 @@ name: 发布任务
 
 ### Example
 
-    curl -X POST "http://0:9004/weidu/api/v1/task/publish" -i -d '{"creator_id": "erb4krcbbirbtcwnhwopeizz5o","industry":1, "type":1,"style": 1, "hire": 1,"abstract":"摘要 概要","desc": "具体需求描述","attachments": "xxxxxx","transaction_mode": 1,"min_price": 1000,"max_price": 2000,"start_time": 1602129479000,"end_time": 1602139479000 ,"is_top": true,  "priority": true, "block_search": true, "copyright_guard": true,"agree_protocol": true}' -H "Content-Type:application/json"
-         HTTP/1.1 201 Created
-         Content-Type: application/json; charset=utf-8
-         Date: Thu, 08 Oct 2020 04:06:01 GMT
-         Content-Length: 464
-         
-    {
-    	"code": 200,
-    	"data": {
-    		"id": 1,
-    		"creator_id": "erb4krcbbirbtcwnhwopeizz5o",
-    		"industry": 1,
-    		"type": 1,
-    		"style": 1,
-    		"hire": 1,
-    		"abstract": "摘要 概要",
-    		"desc": "具体需求描述",
-    		"attachments": "xxxxxx",
-    		"status": 1,
-    		"transaction_mode": 1,
-    		"min_price": 1000,
-    		"max_price": 2000,
-    		"start_time": 1602129479000,
-    		"end_time": 1602139479000,
-    		"is_top": true,
-    		"priority": true,
-    		"block_search": true,
-    		"copyright_guard": true,
-    		"agree_protocol": true,
-    		"requirements": "",
-    		"update_time": 1602129960985,
-    		"create_time": 1602129960985
-    	},
-    	"result": "ok"
-    }
+      curl -X POST "http://weiduchuangzao.com:9004/weidu/api/v1/task/publish" -i -H "User-Id:erb4krcbbirbtcwnhwopeizz5o" -d '{"industry":1, "type":1,"style": 1, "hire": 1,"abstract":"摘要 概要","desc": "具体需求描述","attachments": "r46n33tqcf8qnnx9gaff711jfe,cohe5c3pfpaueajo3be6bwzpge","transaction_mode": 1,"min_price": 1000,"max_price": 2000,"start_time": 1602129479000,"end_time": 1602139479000 ,"is_top": true,  "priority": true, "block_search": true, "copyright_guard": true,"agree_protocol": true}' -H "Content-Type:application/json"
+            HTTP/1.1 201 Created
+            Content-Type: application/json; charset=utf-8
+            Date: Sat, 27 Mar 2021 14:03:21 GMT
+            Content-Length: 559
+        {
+            "code": 200,
+            "data": {
+                "id": "wt6weairutbgxc8fuw7r884har",
+                "creator_id": "",
+                "industry": 1,
+                "type": 1,
+                "style": 1,
+                "hire": 1,
+                "abstract": "摘要 概要",
+                "desc": "具体需求描述",
+                "attachments": "r46n33tqcf8qnnx9gaff711jfe,cohe5c3pfpaueajo3be6bwzpge",
+                "status": 1,
+                "transaction_mode": 1,
+                "price": 0,
+                "min_price": 1000,
+                "max_price": 2000,
+                "start_time": 1602129479000,
+                "end_time": 1602139479000,
+                "score": 0,
+                "is_top": true,
+                "priority": true,
+                "block_search": true,
+                "copyright_guard": true,
+                "agree_protocol": true,
+                "requirements": "",
+                "update_time": 1616853801590,
+                "create_time": 1616853801590
+            },
+            "result": "ok"
+        }

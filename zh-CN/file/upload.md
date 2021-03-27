@@ -46,7 +46,7 @@ name: 上传文件
 
 ### Example
 
-     curl -X POST "http://127.0.0.1:9004/weidu/api/v1/files?user_id=esbng8qjsfn5jr355ikcr4aajr"  -F "files=@/Users/zhangkunming/Downloads/fabu.jpg" -i
+     curl -X POST "http://www.weiduchuangzao.com:9004/weidu/api/v1/files?user_id=esbng8qjsfn5jr355ikcr4aajr"  -F "files=@/Users/zhangkunming/Downloads/fabu.jpg" -i
             HTTP/1.1 100 Continue
 
             HTTP/1.1 201 Created

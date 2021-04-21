@@ -27,7 +27,10 @@ name: 获取入驻信息
             "user_type": "用户类型，1独立设计师 2小型工作室，数据类型int",
             "work_experience": "工作经验，数据类型string",
             "mobile": "联系手机，数据类型string",
+            "identity_number": "身份证号，数据类型string",
             "desc": "自我介绍，数据类型string",
+            "industry": "行业，数据类型int",
+            "type": "类型，数据类型int",
             "work_list": [{
                 "id": "作品id，数据类型string",
                 "user_id": "用户ID，数据类型string",
@@ -71,7 +74,10 @@ name: 获取入驻信息
                 "user_type": 1,
                 "work_experience": "工作经验",
                 "mobile": "17512053075",
-                "desc": "desc",
+                "identity_number": "2335464567634",
+                "desc": "自我介绍",
+                "industry": 1,
+                "type": 1,
                 "work_list": [{
                     "id": "45gbin1qn78a3fajrx3rub1upc",
                     "user_id": "b1onnbw3ebbjtenaco9fxa16ke",

@@ -82,7 +82,7 @@ name: 获取入驻信息
 
 ### Example
 
-        curl -X GET  "http://129.28.198.139:9004/weidu/api/v1/users/accountinfo?user_id=szasc68seig9jrhqw4eaj9gu3h" -i
+        curl -X GET  "http://www.weiduchuangzao.com:9004/weidu/api/v1/users/accountinfo?user_id=szasc68seig9jrhqw4eaj9gu3h" -i
             HTTP/1.1 200 OK
             Content-Type: application/json; charset=utf-8
             Date: Wed, 21 Apr 2021 08:07:23 GMT

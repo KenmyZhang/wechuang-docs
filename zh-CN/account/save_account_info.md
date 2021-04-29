@@ -9,7 +9,9 @@ name: 保存入驻信息（团队、个人和总监）
     POST
 
 ### 限制
-需要登录校验token    
+需要登录校验
+带上头部参数 Authorization:Bearer xxxxxxxx;其中xxxx是token值
+eg: -H "Authorization:Bearer qg9ozt5f7ir4jefenn9xuhfz5w"
 
 ### Content-Type
     application/json

@@ -11,6 +11,11 @@ name: 获取入驻信息
 ### Content-Type
     application/json    
 
+### 限制
+需要登录校验
+带上头部参数 Authorization:Bearer xxxxxxxx;其中xxxx是token值
+eg: -H "Authorization:Bearer qg9ozt5f7ir4jefenn9xuhfz5w"
+
 ### Query Param
     user_id: 用户ID
     

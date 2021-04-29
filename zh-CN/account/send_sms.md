@@ -33,7 +33,7 @@ name: 发送手机验证码
     
 
 ### Example
-    curl -X POST  "http://129.28.198.139:9004/weidu/api/v1/users/mobile/sms"  -d '{"mobile":"13544285662", "captcha_token":"xxxxxxxx"}'   -i
+    curl -X POST  "http://www.weiduchuangzao.com:9004/weidu/api/v1/users/mobile/sms"  -d '{"mobile":"13544285662", "captcha_token":"xxxxxxxx"}'   -i
         HTTP/1.1 200 OK
         Content-Type: application/json; charset=utf-8
         Date: Sun, 04 Oct 2020 08:27:42 GMT

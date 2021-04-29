@@ -8,6 +8,9 @@ name: 保存入驻信息（团队、个人和总监）
 ### Method
     POST
 
+### 限制
+需要登录校验token    
+
 ### Content-Type
     application/json
 
@@ -15,8 +18,8 @@ name: 保存入驻信息（团队、个人和总监）
 
     {
         "user_id": "用户ID，数据类型string",
-        "avatar_url": "头像地址，数据类型string",
         "username": "用户名，数据类型string",
+        "avatar_url": "头像地址，数据类型string",
         "real_name": "姓名，数据类型string",
         "team_name": "团队名称,数据类型string",
         "business_license_file_id": "营业执照文件ID，数据类型string",

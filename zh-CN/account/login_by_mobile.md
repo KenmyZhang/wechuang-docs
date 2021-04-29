@@ -55,7 +55,7 @@ name: 手机验证码登录
 
 ### Example
     
-    curl -X POST  "http://129.28.198.139:9004/weidu/api/v1/users/mobile/login"  -d '{"mobile":"13544285663", "sms_code": "068168", "captcha_token":"xxxxxx" }'   -i
+    curl -X POST  "http://www.weiduchuangzao.com:9004/weidu/api/v1/users/mobile/login"  -d '{"mobile":"13544285663", "sms_code": "068168", "captcha_token":"xxxxxx" }'   -i
         HTTP/1.1 200 OK
         Content-Type: application/json; charset=utf-8
         Set-Cookie: weichuangAUTHTOKEN=eurzagz8ifbj3gzs3u1hsaozao; Path=/; Domain=0.0.0.0; Expires=Sun, 04 Oct 2020 09:15:31 GMT; HttpOnly

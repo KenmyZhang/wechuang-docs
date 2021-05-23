@@ -59,57 +59,57 @@ name: 人才列表
 
     curl -X GET "http://8.134.37.138:9004/weidu/api/v1/users/talents/list?per_page=10" -i
 
-   {
-	"code": 200,
-	"data": [{
-		"user_id": "szasc68seig9jrhqw4eaj9gu3h",
-		"workyear": 0,
-		"avatar_url": "20201004/users/123/biinjhnesifeiasftws8a6q95r/jianzhi.jpg",
-		"nick_name": "1150911",
-		"user_type": 1,
-		"industry": 0,
-		"type": 0,
-		"work_experience": "工作经验",
-		"score": 70,
-		"work_list": [{
-			"id": "45gbin1qn78a3fajrx3rub1upc",
-			"user_id": "szasc68seig9jrhqw4eaj9gu3h",
-			"name": "project name2",
-			"type": 0,
-			"belong_type": 1,
-			"link": "www.baidu.com/",
-			"file_infos": [{
-				"id": "biinjhnesifeiasftws8a6q95r",
-				"task_id": "5trb5tu7tj8kfe7gwk7qakfpac",
-				"user_id": "erb4krcbbirbtcwnhwopeizz5o",
-				"path": "20201004/users/123/biinjhnesifeiasftws8a6q95r/jianzhi.jpg",
-				"preview_path": "20201004/users/123/biinjhnesifeiasftws8a6q95r/jianzhi_preview.jpg",
-				"name": "jianzhi.jpg",
-				"extension": "jpg",
-				"size": 34348,
-				"mime_type": "image/jpeg",
-				"width": 500,
-				"height": 333,
-				"has_pre_img": true
-			}, {
-				"id": "h8n5hftujtgpen8aqnqseec57a",
-				"user_id": "rfeaxzb4etf58cia8i6ha1jwgw",
-				"path": "20201006/users/rfeaxzb4etf58cia8i6ha1jwgw/h8n5hftujtgpen8aqnqseec57a/.",
-				"name": ".",
-				"extension": "",
-				"size": 0,
-				"mime_type": ""
-			}, {
-				"id": "hhtfwf9zrifu8f7rsuh36bkgjw",
-				"user_id": "rfeaxzb4etf58cia8i6ha1jwgw",
-				"path": "20201006/users/rfeaxzb4etf58cia8i6ha1jwgw/hhtfwf9zrifu8f7rsuh36bkgjw/TOC.ini",
-				"name": "TOC.ini",
-				"extension": "ini",
-				"size": 706,
-				"mime_type": ""
-			}]
-		}]
-	}],
-	"result": "ok",
-	"total": 18
-}
+    {
+        "code": 200,
+        "data": [{
+            "user_id": "szasc68seig9jrhqw4eaj9gu3h",
+            "workyear": 0,
+            "avatar_url": "20201004/users/123/biinjhnesifeiasftws8a6q95r/jianzhi.jpg",
+            "nick_name": "1150911",
+            "user_type": 1,
+            "industry": 0,
+            "type": 0,
+            "work_experience": "工作经验",
+            "score": 70,
+            "work_list": [{
+                "id": "45gbin1qn78a3fajrx3rub1upc",
+                "user_id": "szasc68seig9jrhqw4eaj9gu3h",
+                "name": "project name2",
+                "type": 0,
+                "belong_type": 1,
+                "link": "www.baidu.com/",
+                "file_infos": [{
+                    "id": "biinjhnesifeiasftws8a6q95r",
+                    "task_id": "5trb5tu7tj8kfe7gwk7qakfpac",
+                    "user_id": "erb4krcbbirbtcwnhwopeizz5o",
+                    "path": "20201004/users/123/biinjhnesifeiasftws8a6q95r/jianzhi.jpg",
+                    "preview_path": "20201004/users/123/biinjhnesifeiasftws8a6q95r/jianzhi_preview.jpg",
+                    "name": "jianzhi.jpg",
+                    "extension": "jpg",
+                    "size": 34348,
+                    "mime_type": "image/jpeg",
+                    "width": 500,
+                    "height": 333,
+                    "has_pre_img": true
+                }, {
+                    "id": "h8n5hftujtgpen8aqnqseec57a",
+                    "user_id": "rfeaxzb4etf58cia8i6ha1jwgw",
+                    "path": "20201006/users/rfeaxzb4etf58cia8i6ha1jwgw/h8n5hftujtgpen8aqnqseec57a/.",
+                    "name": ".",
+                    "extension": "",
+                    "size": 0,
+                    "mime_type": ""
+                }, {
+                    "id": "hhtfwf9zrifu8f7rsuh36bkgjw",
+                    "user_id": "rfeaxzb4etf58cia8i6ha1jwgw",
+                    "path": "20201006/users/rfeaxzb4etf58cia8i6ha1jwgw/hhtfwf9zrifu8f7rsuh36bkgjw/TOC.ini",
+                    "name": "TOC.ini",
+                    "extension": "ini",
+                    "size": 706,
+                    "mime_type": ""
+                }]
+            }]
+        }],
+        "result": "ok",
+        "total": 18
+    }

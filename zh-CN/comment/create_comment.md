@@ -19,8 +19,7 @@ name: 评论
     }
 
 ### 限制
-    需要登录带上token，eg: -H "Authorization:Bearer xxxxx" ;测试环境可以不带，直接在头部增加参数 User-Id
-
+    需要登录带上token，eg: -H "Authorization:Bearer xxxxx" 
 
 ### Response Body
     {

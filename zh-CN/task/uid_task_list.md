@@ -1,5 +1,5 @@
 ---
-name: 任务列表
+name: 获取指定用户参与的任务列表
 ---
     
 ### Url
@@ -12,20 +12,9 @@ name: 任务列表
     application/json     
 
 ### 限制
-    正式环境需要校验token，token值放在头部参数Authorization, eg： -H "Authorization:Bearer xxxxxx"
-
-    测试环境可以不带token，但需要带上头部参数User-Id, eg: -H "User-Id:123"      
 
 ### Query Param
-    industry:行业，数据类型int
-    type:类型，数据类型int
-    style:风格，数据类型int
-    hire:雇佣，数据类型int
-    release_time:发布时间排序，包括升序1、降序2，数据类型int
-    price: 价格排序，包括升序1、降序2，数据类型int
-    left_time:剩余时间排序，，包括升序1、降序2，数据类型int
-    keyword: 关键词,数据类型string
-
+    user_id:用户ID
 
 
 | 行业 | 编码 |

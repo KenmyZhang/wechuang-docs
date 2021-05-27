@@ -1,9 +1,9 @@
 ---
-name: 发布者平台任务列表
+name: 总监平台任务列表(B)
 ---
     
 ### Url
-    /weidu/api/v1/task/publisher/list
+    /weidu/api/v1/task/director/list
     
 ### Method
     GET
@@ -58,7 +58,7 @@ name: 发布者平台任务列表
 
 ### Example
 
-    curl -X GET "http://0:9004/weidu/api/v1/task/publisher/list" -i -H "Authorization:Bearer fkab1e9nz7a63xr6reacwxp6pw"
+    curl -X GET "http://0:9004/weidu/api/v1/task/director/list" -i -H "Authorization:Bearer fkab1e9nz7a63xr6reacwxp6pw"
         HTTP/1.1 201 Created
         Content-Type: application/json
         Expires: 0

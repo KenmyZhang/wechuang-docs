@@ -1,9 +1,9 @@
 ---
-name: 发布者平台任务列表
+name: 设计者平台任务列表(C)
 ---
     
 ### Url
-    /weidu/api/v1/task/publisher/list
+    /weidu/api/v1/task/desiginer/list
     
 ### Method
     GET

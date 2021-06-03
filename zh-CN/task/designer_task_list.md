@@ -58,7 +58,7 @@ name: 设计者平台任务列表(C)
 
 ### Example
 
-    curl -X GET "http://0:9004/weidu/api/v1/task/publisher/list" -i -H "Authorization:Bearer fkab1e9nz7a63xr6reacwxp6pw"
+    curl -X GET "http://0:9004/weidu/api/v1/task/desiginer/list" -i -H "Authorization:Bearer fkab1e9nz7a63xr6reacwxp6pw"
         HTTP/1.1 201 Created
         Content-Type: application/json
         Expires: 0

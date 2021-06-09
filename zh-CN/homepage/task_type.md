@@ -6,7 +6,7 @@ name: 类型列表
      /weidu/api/v1/homepage/task/type/list
     
 ### Method
-    POST
+    GET
 
 ### Request Payload
     {
@@ -14,105 +14,79 @@ name: 类型列表
         "types":["类型，数据类型int"]
     }
 
-
-|行业| 类型 | 编码 |
-|--- |---|---|
-|游戏 1 |   原画|     1 |
-|游戏 1 |   建模|      2 |
-|游戏 1 |   动作|      3 |
-|游戏 1 |   特效 |     4   |
-|游戏 1 |   界面 |     5   |
-
-
-|行业| 类型 | 编码 |
-|---|---|---|
-|漫画 2 |   角色|     6|
-|漫画 2 |   分镜|      7 |
-|漫画 2 |   线稿|      8 |
-|漫画 2 |   上色 |     9   |
-|漫画 2 |   整套 |     10   |
-
 ### Content-Type
     application/json        
 
 ### Response Body
-    {
-        "result": "成功返回ok，否则返回相应错误详情，数据类型string",
-        "code": "成功返回200，否则返回其他错误码，数据类型int",
-        "data": [
-            {
-                "id":""美工类型，数据类型int",
-                "name":"美工类型名称，数据类型string",
-                "cover_link":"封面链接，数据类型string",
-                "industry_id": "行业id，数据类型int"
-            }
-        ]
-    }
-
-
-
 
 ### Response Code
     HTTP/1.1 200 OK
 
 ### Example
-      curl -X POST "http://129.28.198.139:9004/weidu/api/v1/homepage/task/type/list" -i -d '{"industry_id":2, "type_ids":[6,7]}'
-        HTTP/1.1 200 OK
-        Content-Type: application/json; charset=utf-8
-        Date: Mon, 05 Oct 2020 08:57:09 GMT
-        Content-Length: 276
-        
-       {         
-        	"code": 200,
-        	"list": [{
-        		"id": 6,
-        		"name": "角色",
-        		"cover_link": "20201004/users/123/p75zea7ze3n8z8rw4tkrrhjfw/juese.jpg",
-        		"industry_id": 2
-        	}, {
-        		"id": 7,
-        		"name": "分镜",
-        		"cover_link": "20201004/users/123/p75zea7ze3n8z8rw4tkrrhjfw/fenjing.jpg",
-        		"industry_id": 2
-        	}],
-        	"result": "ok"
-        }        
-        
+      
+	  curl -X GET "http://8.134.37.138:9004/weidu/api/v1/homepage/task/type/list" -i
+			HTTP/1.1 200 OK
+			Content-Type: application/json; charset=utf-8
+			Date: Wed, 09 Jun 2021 13:46:21 GMT
+			Content-Length: 760
 
-    curl -X POST "http://129.28.198.139:9004/weidu/api/v1/homepage/task/type/list" -i -d '{"industry_id":2}'
-        HTTP/1.1 200 OK
-        Content-Type: application/json; charset=utf-8
-        Date: Mon, 05 Oct 2020 08:59:05 GMT
-        Content-Length: 638
-
-    
-        {
-        	"code": 200,
-        	"list": [{
-        		"id": 6,
-        		"name": "角色",
-        		"cover_link": "20201004/users/123/p75zea7ze3n8z8rw4tkrrhjfw/juese.jpg",
-        		"industry_id": 2
-        	}, {
-        		"id": 7,
-        		"name": "分镜",
-        		"cover_link": "20201004/users/123/p75zea7ze3n8z8rw4tkrrhjfw/fenjing.jpg",
-        		"industry_id": 2
-        	}, {
-        		"id": 8,
-        		"name": "线稿",
-        		"cover_link": "20201004/users/123/p75zea7ze3n8z8rw4tkrrhjfw/xiangao.jpg",
-        		"industry_id": 2
-        	}, {
-        		"id": 9,
-        		"name": "上色",
-        		"cover_link": "20201004/users/123/p75zea7ze3n8z8rw4tkrrhjfw/shangse.jpg",
-        		"industry_id": 2
-        	}, {
-        		"id": 10,
-        		"name": "整套",
-        		"cover_link": "20201004/users/123/p75zea7ze3n8z8rw4tkrrhjfw/zhengtao.jpg",
-        		"industry_id": 2
-        	}],
-        	"result": "ok"
-        }
+		{
+			"code": 200,
+			"list": [{
+				"id": 1,
+				"name": "游戏",
+				"cover_link": "20201004/users/123/p75zea7ze3n8z8rw4tkrrhjfw/youxi.jpg",
+				"types": [{
+					"id": 1,
+					"name": "建模",
+					"cover_link": "",
+					"industry_id": 0
+				}, {
+					"id": 2,
+					"name": "动作",
+					"cover_link": "",
+					"industry_id": 0
+				}, {
+					"id": 3,
+					"name": "特效",
+					"cover_link": "",
+					"industry_id": 0
+				}, {
+					"id": 4,
+					"name": "界面",
+					"cover_link": "",
+					"industry_id": 0
+				}]
+			}, {
+				"id": 2,
+				"name": "漫画",
+				"cover_link": "20201004/users/123/p75zea7ze3n8z8rw4tkrrhjfw/manhua.jpg",
+				"types": [{
+					"id": 1,
+					"name": "分镜",
+					"cover_link": "",
+					"industry_id": 0
+				}, {
+					"id": 2,
+					"name": "动作",
+					"cover_link": "",
+					"industry_id": 0
+				}, {
+					"id": 3,
+					"name": "线稿",
+					"cover_link": "",
+					"industry_id": 0
+				}, {
+					"id": 4,
+					"name": "上色",
+					"cover_link": "",
+					"industry_id": 0
+				}, {
+					"id": 5,
+					"name": "整套",
+					"cover_link": "",
+					"industry_id": 0
+				}]
+			}],
+			"result": "ok"
+		}

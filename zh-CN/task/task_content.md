@@ -17,7 +17,9 @@ name: 分配任务（总监）
 ### Requst Body
 
     {
-        "task_id":"任务ID，数据类型string", 
+        "task_id":"任务ID，数据类型string",
+        "name":"子任务名称，数据类型string",
+        "detail":"任务详情，数据类型string",
         "task_content_ids":"子任务附件，多个文件ID用空格分割，数据类型string"
     }
 

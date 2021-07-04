@@ -24,7 +24,7 @@ name: 入群
 
 ### Response Body
     {
-        "result": "成功返回ok，否则返回相应错误详情，数据类型string",
+        "group_id": "群组id，数据类型string",
         "code": "成功返回200，否则返回其他错误码，数据类型int",
     }
 

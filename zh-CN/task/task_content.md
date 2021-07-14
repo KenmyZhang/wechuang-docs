@@ -17,6 +17,7 @@ name: 分配任务（总监）
 ### Requst Body
 
     {
+        "user_id":"用户ID，数据类型string",
         "task_id":"任务ID，数据类型string",
         "name":"子任务名称，数据类型string",
         "detail":"任务详情，数据类型string",
@@ -35,7 +36,7 @@ name: 分配任务（总监）
 
 ### Example
 
-    curl -X POST "http://8.134.37.138:9004/weidu/api/v1/task/content" -i -H "Authorization:Bearer ufnaxsk8p7nk8jutpkwhxoette" -d '{"task_id":"wxx64tja", "task_content_ids":"94psnojrpbft7f9q87nrg9tstr o9a3qoefkt8a5x8e36ib9xj3oe o38iizqeab8utcu5tafcjwnwfo"}'
+    curl -X POST "http://8.134.37.138:9004/weidu/api/v1/task/content" -i -H "Authorization:Bearer ufnaxsk8p7nk8jutpkwhxoette" -d '{"user_id":"xxxxx","task_id":"wxx64tja", "task_content_ids":"94psnojrpbft7f9q87nrg9tstr o9a3qoefkt8a5x8e36ib9xj3oe o38iizqeab8utcu5tafcjwnwfo"}'
         HTTP/1.1 200 OK
         Content-Type: application/json
         Date: Thu, 01 Jul 2021 03:18:56 GMT

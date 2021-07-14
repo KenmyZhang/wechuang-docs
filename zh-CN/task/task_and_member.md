@@ -66,6 +66,8 @@ name: 任务详情页
                             "has_pre_img": "是否有预览图，数据类型bool"
                         }]
                     }],
+                    "role":"角色，数据类型string",
+                    "apply_status":"申请状态，0待处理 1已通过 2未通过，数据类型int", 
                     "work_experience_list": [ //工作经历
                         {
                             "id": "唯一标识，数据类型int",

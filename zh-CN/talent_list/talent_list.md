@@ -14,6 +14,20 @@ name: 人才列表
 ### Query Param
     per_page: 每页返回记录数，数据类型int
     page: 第几页,数据类型int
+    user_type: 1设计师 3项目总监，数据类型int
+    level : 信誉（信用等级） 0 青铜、1 白银、 2 黄金、 3铂金、 4钻石、5王者， 数据类型int
+    workyear: 经验（工作年限） ，数据类型int
+    industry:领域（行业），数据类型int
+
+    | 行业 | 编码 |
+|---|---|
+|   游戏|     1 |
+| UI/UX | 2|
+|   动漫|      3 |
+|   影视 |     4   |
+|   产品 |     5   |
+|   建筑 |     6   |
+
 
 ### Response Body
 
